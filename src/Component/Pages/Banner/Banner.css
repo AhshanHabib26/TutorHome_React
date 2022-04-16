@@ -1,0 +1,38 @@
+.banner_container {
+  position: relative;
+}
+.text_container {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+.text_container h1 {
+  font-size: 52px;
+  word-wrap: normal;
+  color: #363636;
+}
+.text_container p {
+  font-size: 18px;
+  color: #363636;
+  margin-bottom: 40px;
+}
+.text_container .ex_button {
+  color: #ff6347;
+  padding: 15px 18px;
+  background-color: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  text-transform: uppercase;
+  text-decoration: none;
+  
+}
+
+.ex_button:hover{
+    color: #fff;
+    background-color: #ff6347;
+}
+
