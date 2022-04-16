@@ -1,4 +1,5 @@
-.banner_container {
+.banner_container,
+.image_container {
   position: relative;
 }
 .text_container {
