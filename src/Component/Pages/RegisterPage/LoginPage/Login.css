@@ -1,0 +1,122 @@
+.input_wrap{
+    padding: 30px 20px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3),0 2px 4px 2px rgba(0,0,0,0.10);
+    border-radius: 20px;
+}
+.input_wrap h1{
+    font-size: 32px;
+    margin: 0;
+}
+
+.input_items{
+    margin-top: 25px;
+    position: relative;
+    
+}
+.input_items input[type="text"], 
+input[type="email"], 
+input[type="password"]{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid #dbdbdb;
+    outline: none;
+    padding-left: 15px;
+    font-size: 16px;
+    color: #313131; 
+}
+.input_items input:focus{
+    border-color: #8a8a8a;
+}
+.input_items label{
+    position: absolute;
+    top: -20px;
+    left: 8px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #313131;    
+}
+.input_items label span{
+    font-size: 18px;
+    color: #333333;
+}
+.input_txt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.input_txt p a{
+    text-decoration: none;
+    color: #ff6347;
+}
+
+.input_txt strong{
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 80, 80);
+}
+
+.input_items button[type="submit"]{
+    width: 40%;
+    height: 50px;
+    margin-left: 20px;
+    border: 1px solid #b7b7b7;
+    outline: 0;
+    background: linear-gradient(to right, #ad5389, #3c1053);
+    border-radius: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #fff;
+   
+}
+.input_items button:hover{
+    background: #c305fd;
+}
+.inner_input span{
+    font-size: 17px;
+    color: #626262;
+}
+
+.inner_input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inner_input li{
+    list-style: none;
+    margin: 15px;
+}
+.inner_input li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: #333333;
+}
+
+.inner_input a:hover{
+    border-top: 2px solid #c305fd;
+    color: #ad5389;
+}
+.hr_line{
+    position: relative;
+    border: 1px solid #363636;
+    height: 1px;
+    border-color: #ad5389;
+    z-index: 1;
+}
+.hr_line span{
+    position: absolute;
+    content: '';
+    top: -15px;
+    background-color: #ad5389;
+    padding: 2px 5px;
+    border-radius: 20px;
+    color: #fff;
+}
