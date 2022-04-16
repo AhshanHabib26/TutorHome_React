@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Row } from "react-bootstrap";
+import { Button, Card} from "react-bootstrap";
 import "./Service.css";
 
 const Service = ({ service }) => {
@@ -10,11 +10,13 @@ const Service = ({ service }) => {
       <Card>
         <Card.Img variant="top" src={Image} />
         <Card.Body>
-          <Card.Title>{Name}</Card.Title>
-          <Card.Text>
-            <h2>{Price}</h2>
-          </Card.Text>
-          <Button variant="primary">Go somewhere</Button>
+        <div className="service_info d-flex align-items-center justify-content-between">
+            <p className="info_title">{Category}</p>
+            <p className="text-success fw-bold"><small>{Rating}</small></p>
+        </div>
+          <Card.Title className="text-secondary mb-2">{Name}</Card.Title>
+          <Card.Title className="my-3 fw-bold text-muted">{Price}</Card.Title>
+          <Button variant="success">Checkout</Button>
         </Card.Body>
       </Card>
     </div>
