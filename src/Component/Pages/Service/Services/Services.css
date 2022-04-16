@@ -1,0 +1,16 @@
+
+.services_title{
+    text-align: center;
+    color: #363636;
+    z-index: 1;
+    position: relative;
+    display: block;
+}
+.services_title span{
+  color: rgb(255, 137, 116);
+}
+.services_container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+}

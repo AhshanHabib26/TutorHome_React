@@ -1,0 +1,7 @@
+.service_container{
+    border: 1px solid;
+    padding: 0 50px;
+}
+.service_inner_sec .img_container img{
+    width: 80%;
+}
