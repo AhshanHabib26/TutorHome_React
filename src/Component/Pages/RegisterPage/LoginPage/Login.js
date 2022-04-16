@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import auth from "../../../../app_firebase_init";
 
 const Login = () => {
+  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const heandlePassword = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleSignInSubmit = (e) => {
+    signInWithEmailAndPassword(email, password)
+    e.preventDefault();
+  };
+
   return (
     <div className="container w-50 mx-auto mt-5">
       <h2 className="text-center my-5 fw-bold text-success">
@@ -12,18 +30,18 @@ const Login = () => {
       </h2>
       <div className="input_wrap">
         <h1>Log in</h1>
-        <form action="">
+        <form onSubmit={handleSignInSubmit}>
           <div className="input_items">
             <label>
               Your Email <span>*</span>
             </label>
-            <input type="email" placeholder="Email" required />
+            <input onBlur={handleEmail} type="email" placeholder="Email" required />
           </div>
           <div className="input_items">
             <label>
               Your Password <span>*</span>
             </label>
-            <input type="password" placeholder="Password" />
+            <input onBlur={heandlePassword} type="password" placeholder="Password" />
           </div>
 
           <div className="input_txt">
