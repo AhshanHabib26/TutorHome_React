@@ -1,0 +1,50 @@
+[
+    {
+        "Id": 1,
+        "Name": "Basic Lavel Youth Health Training",
+        "Price": "$59",
+        "Image": "https://i.ibb.co/Z8ssxY5/service-1.png",
+        "Category": "Lifestyle",
+        "Rating": "4 Star"
+    },
+    {
+        "Id": 2,
+        "Name": "WordPress Course With Elementor",
+        "Price": "$39",
+        "Image": "https://i.ibb.co/k5wFDjF/service-2.png",
+        "Category": "Programming",
+        "Rating": "4.5 Star"
+    },
+    {
+        "Id": 3,
+        "Name": "Complete Digital Marketing Course",
+        "Price": "$159",
+        "Image": "https://i.ibb.co/hZcLqyt/service-3.png",
+        "Category": "Programming",
+        "Rating": "5 Star"
+    },
+    {
+        "Id": 4,
+        "Name": "The Ultimate App Making Course",
+        "Price": "$79",
+        "Image": "https://i.ibb.co/jkmz4Qb/service-4.png",
+        "Category": "Bussiness",
+        "Rating": "4.8 Star"
+    },
+    {
+        "Id": 5,
+        "Name": "Web Design Beginner to Advanced Course",
+        "Price": "$99",
+        "Image": "https://i.ibb.co/6bN0qv8/service-5.png",
+        "Category": "Programming",
+        "Rating": "5 Star"
+    },
+    {
+        "Id": 6,
+        "Name": "Absolute Beginners Cooking Course",
+        "Price": "$39",
+        "Image": "https://i.ibb.co/CbpdYxF/service-6.png",
+        "Category": "Lifestyle",
+        "Rating": "4.8 Star"
+    }
+]
