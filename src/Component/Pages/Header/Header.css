@@ -1,0 +1,18 @@
+.LogoSpan{
+    font-size: 25px;
+    color: rgb(255, 85, 55);
+    font-weight: bolder;
+    text-shadow: 1px 3px 5px #363636;
+    position: relative;
+}
+.LogoSpan::after{
+    position: absolute;
+    content: "";
+    border: 2px dashed;
+    border-color: rgb(255, 148, 129);
+    border-radius: 10px;
+    width: 35px;
+    bottom: -3px;
+    left: -16px;
+   
+}
