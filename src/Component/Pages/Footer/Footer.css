@@ -8,12 +8,12 @@
     padding: 60px 30px;
 }
 .about_section h1{
-    font-size: 28px;
+    font-size: 24px;
     color: #363636;
     position: relative;
 }
 .about_section h1 .titleSpan{
-    font-size: 25px;
+    font-size: 24px;
     color: rgb(255, 85, 55);
     font-weight: bolder;
     text-shadow: 1px 3px 5px #363636;
@@ -25,9 +25,9 @@
     border: 2px dashed;
     border-color: rgb(255, 148, 129);
     border-radius: 10px;
-    width: 35px;
+    width: 46px;
     bottom: -3px;
-    left: -16px;
+    left: -12px;
 }
 .about_section p{
     width: 320px;

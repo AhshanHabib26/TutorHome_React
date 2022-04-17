@@ -18,7 +18,7 @@ const Header = () => {
     <div>
       <Navbar bg="body" expand="lg" >
         <Container fluid>
-          <Navbar.Brand as={Link} to='/' >Tutor<span className="LogoSpan">H</span> </Navbar.Brand>
+          <Navbar.Brand as={Link} to='/' >TutorHo<span className="LogoSpan">me</span> </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav

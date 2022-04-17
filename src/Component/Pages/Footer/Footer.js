@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='mt-5'>
             <div className="footer_container">
                 <div className="about_section">
-                    <h1>Tutor<span className='titleSpan'>H</span> </h1>
+                    <h1>TutorHo<span className='titleSpan'>me</span> </h1>
                     <p>The more that you read, the more things you will know. The more that you learn, the more places you'll go.</p>
                     <div className="social_icons">
                         <li><BsFacebook/></li>
