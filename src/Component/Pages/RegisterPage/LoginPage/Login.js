@@ -1,15 +1,24 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../../../app_firebase_init";
 
 const Login = () => {
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user] = useAuthState(auth);
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const from = location.state?.from?.pathname || "/";
+  if(user){
+    navigate(from, { replace: true });
+  }
+
 
   const handleEmail = (e) => {
     setEmail(e.target.value);

@@ -1,29 +1,26 @@
 import React, { useState } from "react";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 import auth from "../../../../app_firebase_init";
-import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {  useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 const Signup = () => {
   const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
-  // const [name, setName] = useState("");
+ 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  // const handleName = (e) => {
-  //   setName(e.target.value);
-  // };
-
   const handleEmail = (e) => {
-    setEmail(e.target.value);
+    const inputValue = e.target.value;
+    setEmail(inputValue);
   };
   const heandlePassword = (e) => {
-    setPassword(e.target.value);
+    const passValue = e.target.value;
+     setPassword(passValue);
   };
 
   const handleSubmit = (e) => {
-    createUserWithEmailAndPassword(email, password)
+    createUserWithEmailAndPassword(email, password);
     e.preventDefault();
   };
 
@@ -40,7 +37,6 @@ const Signup = () => {
               Your Name <span>*</span>
             </label>
             <input
-              // onBlur={handleName}
               type="text"
               placeholder="Name"
               required
@@ -67,13 +63,6 @@ const Signup = () => {
               placeholder="Password"
             />
           </div>
-          <div className="input_items">
-            <label>
-              Confirm Password <span>*</span>
-            </label>
-            <input type="password" placeholder="Password" />
-          </div>
-
           <div className="input_txt">
             <p>
               You Have an Account? <Link to="/login">Login</Link>
