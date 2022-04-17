@@ -113,3 +113,19 @@
     color: #ff6347;
     border: 1px solid #ff6347;
 }
+
+/* Responsive Code Start Here  */
+
+@media only screen and (max-width: 992px) {
+    .contact_area{ grid-template-columns: repeat(1, 1fr);
+        padding: 0;
+    }
+    .contact_input .submit_btn input[type="submit"] {
+        width: 40%;
+    }
+  }
+@media only screen and (max-width: 1215px) {
+    .contact_input .submit_btn input[type="submit"] {
+        width: 40%;
+    }
+  }
