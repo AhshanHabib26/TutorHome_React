@@ -1,0 +1,42 @@
+.image_container img{
+    width: 280px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgb(255, 153, 135);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+.image_container img:hover{
+    transform: scale(1.065);
+    box-shadow: 0 2px 50px rgb(214, 214, 214);
+}
+.info_details h1{
+    font-size: 32px;
+    color: #363636;
+}
+.info_details p{ 
+    font-size: 16px;
+    color: #474747;
+}
+.info_details small{
+    font-size: 14px;
+    font-weight: 600;
+    color: #474747;
+}
+.scl_link li{
+    display: inline-block;
+    margin-right: 15px;
+    list-style: none;
+}
+.scl_link li a{
+    text-decoration: none;
+    background-color: #ff6347;
+    padding: 12px 22px;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.scl_link li a:hover{
+    background-color: rgb(255, 138, 117);
+}

@@ -27,6 +27,7 @@ const Header = () => {
               navbarScroll
             >
               <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>
+              <Nav.Link as={Link} to='/about-me'>About Me</Nav.Link>
             </Nav>
             <Nav>
               {user ? (
