@@ -3,10 +3,13 @@ import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
 import { Link, useNavigate} from "react-router-dom";
 import auth from "../../../../app_firebase_init";
-import {  useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {  useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
   const [createUserWithEmailAndPassword,  user] = useCreateUserWithEmailAndPassword(auth);
+  const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
   const [signInWithGoogle,  GoUser] = useSignInWithGoogle(auth);
   const [signInWithGithub,  GitUser] = useSignInWithGithub(auth);
  const navigate = useNavigate()
@@ -20,6 +23,10 @@ const Signup = () => {
     const passValue = e.target.value;
      setPassword(passValue);
   };
+  if(error){
+    toast('Please Provide Valid Email')
+  }
+  
 
   const handleSubmit = (e) => {
     createUserWithEmailAndPassword(email, password);
@@ -34,8 +41,13 @@ const Signup = () => {
     signInWithGithub()
   }
 
+  if(user){
+    sendEmailVerification()
+    toast('Email Verification Sent')
+  }
+
   if(user || GitUser || GoUser){
-    navigate('/checkout')
+    navigate('/home')
   }
 
 
@@ -82,11 +94,11 @@ const Signup = () => {
             <p>
               You Have an Account? <Link to="/login">Login</Link>
             </p>
-            <strong>Forgot Password?</strong>
           </div>
           <div className="input_items">
             <button type="submit">Register </button>
           </div>
+          <ToastContainer />
         </form>
         <div className="hr_line d-flex justify-content-center w-50 mx-auto my-5">
           <span>Or</span>

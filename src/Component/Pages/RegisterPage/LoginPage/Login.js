@@ -3,11 +3,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
-import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useAuthState, useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../../app_firebase_init";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-  const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [signInWithEmailAndPassword, user1, loading, error] = useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending, SPRerror] = useSendPasswordResetEmail(auth);
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   const [signInWithGithub] = useSignInWithGithub(auth);
   const [email, setEmail] = useState("");
@@ -21,6 +24,13 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
+  if(error || SPRerror){
+   toast('Please Provide Valid Information') 
+  }
+
+  if(user1){
+    navigate('/')
+  }
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -41,6 +51,10 @@ const Login = () => {
 
   const handleGithubSignIn = () =>{
     signInWithGithub()
+  }
+  const handlePasswordReset = async () =>{
+    await sendPasswordResetEmail(email);
+    toast('Password Reset Link Sent')
   }
 
   return (
@@ -68,11 +82,12 @@ const Login = () => {
             <p>
               You Have Not a Account? <Link to="/signup">Sign Up</Link>
             </p>
-            <strong>Forgot Password?</strong>
+            <strong onClick={handlePasswordReset}>Forgot Password?</strong>
           </div>
           <div className="input_items">
             <button type="submit"> Login</button>
           </div>
+          <ToastContainer />
         </form>
 
         <div className="hr_line d-flex justify-content-center w-50 mx-auto my-5">

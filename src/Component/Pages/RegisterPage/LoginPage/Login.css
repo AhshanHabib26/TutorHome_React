@@ -61,6 +61,7 @@ input[type="password"]{
     font-size: 16px;
     font-weight: 600;
     color: rgb(255, 80, 80);
+    cursor: pointer;
 }
 
 .input_items button[type="submit"]{
