@@ -1,0 +1,23 @@
+.support_container{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.support_info h1{
+    font-size: 48px;
+    color: #585858;
+}
+.support_info a{
+    text-decoration: none;
+    border: 1px solid rgb(252, 145, 126);
+    padding: 12px 18px;
+    color: rgb(252, 145, 126);
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.support_info a:hover{
+    color: #fff;
+    background-color: rgb(252, 145, 126);
+}
