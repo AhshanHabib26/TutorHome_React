@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg="body" expand="lg" >
         <Container fluid>
           <Navbar.Brand as={Link} to='/' >Tutor<span className="LogoSpan">H</span> </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
