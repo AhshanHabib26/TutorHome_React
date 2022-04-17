@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
-import { Link} from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import auth from "../../../../app_firebase_init";
-import {  useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {  useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 
 const Signup = () => {
-  const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);
- 
+  const [createUserWithEmailAndPassword,  user] = useCreateUserWithEmailAndPassword(auth);
+  const [signInWithGoogle,  GoUser] = useSignInWithGoogle(auth);
+  const [signInWithGithub,  GitUser] = useSignInWithGithub(auth);
+ const navigate = useNavigate()
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const handleEmail = (e) => {
@@ -23,6 +25,19 @@ const Signup = () => {
     createUserWithEmailAndPassword(email, password);
     e.preventDefault();
   };
+
+  const handleGoogleSignUp = () =>{
+    signInWithGoogle()
+  }
+
+  const handleGithubSignUp = () =>{
+    signInWithGithub()
+  }
+
+  if(user || GitUser || GoUser){
+    navigate('/checkout')
+  }
+
 
   return (
     <div className="container w-50 mx-auto mt-5">
@@ -77,7 +92,7 @@ const Signup = () => {
           <span>Or</span>
         </div>
         <div className="d-flex justify-content-center my-3">
-          <button className="d-flex align-items-center me-3 btn btn-danger w-25 justify-content-center p-2">
+          <button onClick={handleGoogleSignUp} className="d-flex align-items-center me-3 btn btn-light text-success w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}
@@ -86,7 +101,7 @@ const Signup = () => {
             />{" "}
             Google
           </button>
-          <button className="d-flex align-items-center btn btn-success w-25 justify-content-center p-2">
+          <button onClick={handleGithubSignUp} className="d-flex align-items-center btn btn-light text-success w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}

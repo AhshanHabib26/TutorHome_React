@@ -80,7 +80,7 @@ const Login = () => {
         </div>
 
         <div className="d-flex justify-content-center my-3">
-          <button onClick={handleGoogleSignIn} className="d-flex align-items-center me-3 btn btn-danger w-25 justify-content-center p-2">
+          <button onClick={handleGoogleSignIn} className="d-flex align-items-center me-3 btn btn-light text-success w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}
@@ -89,7 +89,7 @@ const Login = () => {
             />{" "}
             Google
           </button>
-          <button onClick={handleGithubSignIn} className="d-flex align-items-center btn btn-success w-25 justify-content-center p-2">
+          <button onClick={handleGithubSignIn} className="d-flex align-items-center btn btn-light text-success w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}
