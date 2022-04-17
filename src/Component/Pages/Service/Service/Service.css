@@ -1,3 +1,12 @@
 .info_title{
-    color: tomato;
+    color: #ff6347;
+}
+.service_img{
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.service_img:hover{
+    transform: scale(1.065);
+    opacity: 0.75;
 }

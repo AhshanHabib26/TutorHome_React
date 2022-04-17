@@ -52,7 +52,7 @@ const Signup = () => {
 
 
   return (
-    <div className="container w-50 mx-auto mt-5">
+    <div className="container w-75 mx-auto mt-5">
       <h2 className="text-center my-5 fw-bold text-success">
         Welcome To Register Page
       </h2>

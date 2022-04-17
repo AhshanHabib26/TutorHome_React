@@ -10,7 +10,7 @@ const Service = ({ service }) => {
   return (
     <div className="container gy-4">
       <Card>
-        <Card.Img variant="top" src={Image} />
+        <Card.Img className="service_img" variant="top" src={Image} />
         <Card.Body>
         <div className="service_info d-flex align-items-center justify-content-between">
             <p className="info_title">{Category}</p>
