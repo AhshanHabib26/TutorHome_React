@@ -1,18 +1,20 @@
 [
     {
         "Id": 1,
-        "Name": "Basic Lavel Youth Health Training",
+        "Name": "Basic Youth Health Training",
         "Price": "$59",
         "Image": "https://i.ibb.co/Z8ssxY5/service-1.png",
         "Category": "Lifestyle",
+        "Description": "This Course Will Explore The Dynamic Factors Affecting The Health and Wellbeing of Young People Around The World, and How Important It Is for Individuals Persons",
         "Rating": "4 Star"
     },
     {
         "Id": 2,
-        "Name": "WordPress Course With Elementor",
+        "Name": "Learn WordPress With Elementor",
         "Price": "$39",
         "Image": "https://i.ibb.co/k5wFDjF/service-2.png",
         "Category": "Programming",
+        "Description": " In This Comprehensive Course, I'll Show You How To Use WordPress and Elementor to Create Your Website and Walk You Through The Process ",
         "Rating": "4.5 Star"
     },
     {
@@ -21,30 +23,34 @@
         "Price": "$159",
         "Image": "https://i.ibb.co/hZcLqyt/service-3.png",
         "Category": "Programming",
+        "Description": "By Getting Enrolled in The Course You Will Get the Boost in Your Career as it Will Give You in-depth Knowledge About Digital marketing From the Scratch",
         "Rating": "5 Star"
     },
     {
         "Id": 4,
-        "Name": "The Ultimate App Making Course",
+        "Name": "The Complete App Making Course",
         "Price": "$79",
         "Image": "https://i.ibb.co/jkmz4Qb/service-4.png",
         "Category": "Bussiness",
+        "Description": "In This Course, You'll Learn the Basics of Building Android Apps with the Kotlin programming language. Along the way, You'll Develop a Collection of Apps",
         "Rating": "4.8 Star"
     },
     {
         "Id": 5,
-        "Name": "Web Design Beginner to Advanced Course",
+        "Name": "Web Design Beginner to Advanced",
         "Price": "$99",
         "Image": "https://i.ibb.co/6bN0qv8/service-5.png",
         "Category": "Programming",
+        "Description": "In This Complete Web Designing Course: Beginner to Advanced Level You Will Learn to Build Responsive Websites From Scratch.",
         "Rating": "5 Star"
     },
     {
         "Id": 6,
-        "Name": "Absolute Beginners Cooking Course",
+        "Name": "Beginners Cooking Course",
         "Price": "$39",
         "Image": "https://i.ibb.co/CbpdYxF/service-6.png",
         "Category": "Lifestyle",
+        "Description": "Even if You Know Nothing About Cooking, This Course Will Give You The Skills and Confidence to Prepare and Cook a Wide Range of Meals, All Taught in Simple",
         "Rating": "4.8 Star"
     }
 ]
