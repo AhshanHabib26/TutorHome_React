@@ -23,8 +23,9 @@
 }
 
 /* Responsive Code Start Here  */
-@media only screen and (max-width: 666px) {
+@media only screen and (max-width: 774px) {
     .support_container{ flex-direction: column-reverse;}
+    .support_img img{ margin-bottom: 30px;}
   }
 
 @media only screen and (max-width: 775px) {
