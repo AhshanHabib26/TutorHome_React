@@ -1,0 +1,79 @@
+.footer_container{
+    display: flex;
+   align-content: center;
+    justify-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #e9f2f7;
+    padding: 60px 30px;
+}
+.about_section h1{
+    font-size: 28px;
+    color: #363636;
+    position: relative;
+}
+.about_section h1 span{
+    font-size: 25px;
+    color: rgb(255, 85, 55);
+    font-weight: bolder;
+    text-shadow: 1px 3px 5px #363636;
+    position: relative;
+}
+.about_section h1 span::after{
+    position: absolute;
+    content: "";
+    border: 2px dashed;
+    border-color: rgb(255, 148, 129);
+    border-radius: 10px;
+    width: 35px;
+    bottom: -3px;
+    left: -16px;
+}
+.about_section p{
+    width: 320px;
+    font-size: 16px;
+    color: #363636;
+}
+.about_section .social_icons li{
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Useful_links_section{
+    position: relative;
+}
+.Useful_links_section li{
+    display: block;
+    list-style: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.Useful_links_section li:hover{
+    color: #ff8b76;
+}
+.Useful_links_section li::before{
+    position: absolute;
+    content: '\2055';
+    margin-left: -15px;
+    color: rgb(255, 152, 134);
+    font-size: 16px;
+}
+.contact_us_section{
+    display: block;
+    font-size: 16px;
+    color: #363636;
+    margin-bottom: 10px;
+}
+.contact_us_section .phone_info,
+.contact_us_section .email_info{
+    margin-bottom: 8px;
+}
+.contact_us_section .phone_info span,
+.contact_us_section .email_info span,
+.contact_us_section .address_info span{
+    margin-left: 15px;
+}
