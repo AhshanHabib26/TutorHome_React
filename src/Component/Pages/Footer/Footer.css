@@ -80,6 +80,25 @@
 .contact_us_section .address_info .locationSpan{
     margin-left: 15px;
 }
+.copyright_section{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #d1d1d1;
+    padding: 10px;
+    font-size: 17px;  
+    cursor: pointer;
+}
+.copyright_section a{
+    text-decoration: none;
+    color: #f02400;
+    transition: 0.5s;
+}
+.copyright_section a:hover{
+    color: #ff5334;
+}
 
 /* Responsive Code Start Here  */
 

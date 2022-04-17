@@ -1,9 +1,13 @@
 import React from 'react';
 import {BsFacebook, BsGithub, BsFillTelephoneOutboundFill} from 'react-icons/bs'
-import {FaLinkedinIn} from 'react-icons/fa'
+import {FaLinkedinIn, FaRegCopyright} from 'react-icons/fa'
 import {MdOutlineMarkEmailUnread} from 'react-icons/md'
 import {ImLocation2} from 'react-icons/im'
 import './Footer.css'
+
+const date = new Date()
+const year = date.getFullYear()
+
 
 const Footer = () => {
     return (
@@ -39,6 +43,9 @@ const Footer = () => {
 
                     </div>
                 </div>
+            </div>
+            <div className="copyright_section">
+                <p> <FaRegCopyright/> All Rights Resrved {year} - 2026 | Design By  <a href="https://www.linkedin.com/in/ahshanhabib26/">Ahshan Habib</a> </p>
             </div>
         </div>
     );
