@@ -3,11 +3,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
-import { useAuthState, useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useAuthState, useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import auth from "../../../../app_firebase_init";
 
 const Login = () => {
   const [signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
+  const [signInWithGoogle] = useSignInWithGoogle(auth);
+  const [signInWithGithub] = useSignInWithGithub(auth);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user] = useAuthState(auth);
@@ -31,6 +33,15 @@ const Login = () => {
     signInWithEmailAndPassword(email, password)
     e.preventDefault();
   };
+
+
+  const handleGoogleSignIn = () =>{
+    signInWithGoogle()
+  }
+
+  const handleGithubSignIn = () =>{
+    signInWithGithub()
+  }
 
   return (
     <div className="container w-50 mx-auto mt-5">
@@ -69,7 +80,7 @@ const Login = () => {
         </div>
 
         <div className="d-flex justify-content-center my-3">
-          <button className="d-flex align-items-center me-3 btn btn-danger w-25 justify-content-center p-2">
+          <button onClick={handleGoogleSignIn} className="d-flex align-items-center me-3 btn btn-danger w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}
@@ -78,7 +89,7 @@ const Login = () => {
             />{" "}
             Google
           </button>
-          <button className="d-flex align-items-center btn btn-success w-25 justify-content-center p-2">
+          <button onClick={handleGithubSignIn} className="d-flex align-items-center btn btn-success w-25 justify-content-center p-2">
             {" "}
             <img
               style={{ width: "30px", marginRight: "5px" }}

@@ -9,7 +9,7 @@
     position: absolute;
     content: "";
     border: 2px dashed;
-    border-color: rgb(255, 148, 129);
+    border-color: #ff9380;
     border-radius: 10px;
     width: 35px;
     bottom: -3px;
