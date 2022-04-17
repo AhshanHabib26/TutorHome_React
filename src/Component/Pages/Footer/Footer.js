@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='mt-5'>
             <div className="footer_container">
                 <div className="about_section">
-                    <h1>Tutor<span>H</span> </h1>
+                    <h1>Tutor<span className='titleSpan'>H</span> </h1>
                     <p>The more that you read, the more things you will know. The more that you learn, the more places you'll go.</p>
                     <div className="social_icons">
                         <li><BsFacebook/></li>
@@ -27,15 +27,15 @@ const Footer = () => {
                 <div className="contact_us_section">
                     <div className="phone_info">
                     <BsFillTelephoneOutboundFill/>
-                    <span>(+880)- 1646418365</span>
+                    <span className='phoneSpan'>(+880)- 1646418365</span>
                     </div>
                     <div className="email_info">
                         <MdOutlineMarkEmailUnread/>
-                        <span>habib.net27@gmail.com</span>
+                        <span className='emailSpan'>habib.net27@gmail.com</span>
                     </div>
                     <div className="address_info">
                         <ImLocation2/>
-                        <span>Dhaka, Bangladesh</span>
+                        <span className='locationSpan'>Dhaka, Bangladesh</span>
 
                     </div>
                 </div>

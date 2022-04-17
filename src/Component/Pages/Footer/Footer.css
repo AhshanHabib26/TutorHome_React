@@ -12,14 +12,14 @@
     color: #363636;
     position: relative;
 }
-.about_section h1 span{
+.about_section h1 .titleSpan{
     font-size: 25px;
     color: rgb(255, 85, 55);
     font-weight: bolder;
     text-shadow: 1px 3px 5px #363636;
     position: relative;
 }
-.about_section h1 span::after{
+.about_section h1 .titleSpan::after{
     position: absolute;
     content: "";
     border: 2px dashed;
@@ -71,9 +71,12 @@
 .contact_us_section .phone_info,
 .contact_us_section .email_info{
     margin-bottom: 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
-.contact_us_section .phone_info span,
-.contact_us_section .email_info span,
-.contact_us_section .address_info span{
+.contact_us_section .phone_info .phoneSpan,
+.contact_us_section .email_info .emailSpan,
+.contact_us_section .address_info .locationSpan{
     margin-left: 15px;
 }
