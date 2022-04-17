@@ -4,9 +4,11 @@
 }
 .text_container {
   position: absolute;
+  content: '';
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
+ 
 }
 .text_container h1 {
   font-size: 52px;
@@ -38,3 +40,38 @@
     background-color: #ff6347;
 }
 
+
+/* Responsive Code Start Here  */
+
+@media only screen and (max-width: 596px) {
+  .text_container { text-align: center;}
+  .text_container h1{ display: none;}
+  .text_container .ex_button{ padding: 20px ; font-size: 16px; margin-bottom: 20px;}
+}
+
+@media only screen and (max-width: 600px) {
+  .banner_container{ position: relative;}
+  .banner_container img{ background-position: center; background-size: cover; object-fit: contain;}
+  .text_container { text-align: center;}
+  .text_container h1{ font-size: 35px; margin-bottom: 10px; margin-top: 28px;}
+  .text_container p{display: none;}
+  .text_container .ex_button{ padding: 10px ; font-size: 14px; margin-bottom: 20px;}
+}
+
+@media only screen and (max-width: 768px) {
+  .banner_container{ position: relative;}
+  .banner_container img{ background-position: center; background-size: cover; object-fit: contain;}
+  .text_container { text-align: center;}
+  .text_container h1{ font-size: 35px; margin-bottom: 30px;}
+  .text_container p{display: none;}
+  .text_container .ex_button{ padding: 10px ; font-size: 14px; }
+}
+
+@media only screen and (max-width: 992px) {
+  .banner_container{ position: relative;}
+  .banner_container img{ background-position: center; background-size: cover; object-fit: contain;}
+  .text_container { text-align: center;}
+  .text_container h1{ font-size: 35px; margin-top: -70px;}
+  .text_container p{font-size: 16px; width: 380px; margin-bottom: 20px;}
+  .text_container .ex_button{ padding: 10px ; font-size: 14px; margin-bottom: 20px;}
+}

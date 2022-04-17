@@ -21,3 +21,40 @@
     color: #fff;
     background-color: rgb(252, 145, 126);
 }
+
+/* Responsive Code Start Here  */
+@media only screen and (max-width: 666px) {
+    .support_container{ flex-direction: column-reverse;}
+  }
+
+@media only screen and (max-width: 775px) {
+    .support_container{ justify-content: space-between;}
+    .support_img img{
+        width: 350px;
+    }
+    .support_info h1{ font-size: 24px;}
+  }
+
+@media only screen and (max-width: 930px) {
+    .support_container{ justify-content: space-between;}
+    .support_img img{
+        width: 380px;
+    }
+    .support_info h1{ font-size: 32px;}
+  }
+
+@media only screen and (max-width: 978px) {
+    .support_container{ justify-content: space-between;}
+    .support_img img{
+        width: 420px;
+    }
+    .support_info h1{ font-size: 30px;}
+  }
+
+@media only screen and (max-width: 1025px) {
+    .support_container{ justify-content: space-between;}
+    .support_img img{
+        width: 420px;
+    }
+    .support_info h1{ font-size: 32px;}
+  }
