@@ -23,6 +23,15 @@
 }
 
 /* Responsive Code Start Here  */
+@media only screen and (max-width: 420px) {
+    .support_container{ flex-direction: column-reverse;}
+    .support_img img{width: 280px;}
+    .about_section p { width: 280px;}
+    .support_info h1 { font-size: 26px;}
+
+
+  }
+
 @media only screen and (max-width: 774px) {
     .support_container{ flex-direction: column-reverse;}
     .support_img img{ margin-bottom: 30px;}
