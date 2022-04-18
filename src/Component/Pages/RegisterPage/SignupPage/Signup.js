@@ -47,7 +47,7 @@ const Signup = () => {
   }
 
   if(user || GitUser || GoUser){
-    navigate('/home')
+    navigate('/')
   }
 
 

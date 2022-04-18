@@ -20,16 +20,18 @@ const Login = () => {
   const navigate = useNavigate()
 
   const from = location.state?.from?.pathname || "/";
+
   if(user){
     navigate(from, { replace: true });
   }
+
 
   if(error || SPRerror){
    toast('Please Provide Valid Information') 
   }
 
   if(user1){
-    navigate('/')
+    navigate('/checkout')
   }
 
   const handleEmail = (e) => {
