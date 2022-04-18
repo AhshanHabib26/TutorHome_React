@@ -3,13 +3,12 @@ import Google from "../../../../Images/google.png";
 import Github from "../../../../Images/github.png";
 import { Link, useNavigate} from "react-router-dom";
 import auth from "../../../../app_firebase_init";
-import {  useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {  useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
-  const [createUserWithEmailAndPassword,  user] = useCreateUserWithEmailAndPassword(auth);
-  const [sendEmailVerification, sending, error] = useSendEmailVerification(auth);
+  const [createUserWithEmailAndPassword, loading, user] = useCreateUserWithEmailAndPassword(auth);
   const [signInWithGoogle,  GoUser] = useSignInWithGoogle(auth);
   const [signInWithGithub,  GitUser] = useSignInWithGithub(auth);
  const navigate = useNavigate()
@@ -23,11 +22,10 @@ const Signup = () => {
     const passValue = e.target.value;
      setPassword(passValue);
   };
-  if(error){
-    toast('Please Provide Valid Email')
-  }
-  
 
+  if(loading){
+    toast('Wait a Few Minute')
+  }
   const handleSubmit = (e) => {
     createUserWithEmailAndPassword(email, password);
     e.preventDefault();
@@ -39,11 +37,6 @@ const Signup = () => {
 
   const handleGithubSignUp = () =>{
     signInWithGithub()
-  }
-
-  if(user){
-    sendEmailVerification()
-    toast('Email Verification Sent')
   }
 
   if(user || GitUser || GoUser){

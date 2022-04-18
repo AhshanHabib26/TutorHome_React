@@ -19,7 +19,7 @@ const Service = ({ service }) => {
           <Card.Title className="text-secondary mb-2">{Name}</Card.Title>
           <Card.Text className="text-secondary">{sliceDescription}</Card.Text>
           <Card.Title className="my-3 fw-bold text-muted">{Price}</Card.Title>
-          <Button as={Link} to='/checkout' variant="success">Checkout</Button>
+          <Button as={Link} to='/checkout' variant="success">Enroll Now</Button>
         </Card.Body>
       </Card>
     </div>

@@ -25,7 +25,6 @@ const Login = () => {
     navigate(from, { replace: true });
   }
 
-
   if(error || SPRerror){
    toast('Please Provide Valid Information') 
   }
@@ -33,6 +32,15 @@ const Login = () => {
   if(user1){
     navigate('/checkout')
   }
+
+  if(loading){
+    toast('Wait a Few Minute')
+  }
+
+  if(sending){
+    toast('Password Reset Link Sent')
+  }
+  
 
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -56,7 +64,6 @@ const Login = () => {
   }
   const handlePasswordReset = async () =>{
     await sendPasswordResetEmail(email);
-    toast('Password Reset Link Sent')
   }
 
   return (
