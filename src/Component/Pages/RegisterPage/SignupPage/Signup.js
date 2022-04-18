@@ -8,7 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Signup = () => {
-  const [createUserWithEmailAndPassword, loading, user] = useCreateUserWithEmailAndPassword(auth);
+  const [createUserWithEmailAndPassword, loading, user] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
   const [signInWithGoogle,  GoUser] = useSignInWithGoogle(auth);
   const [signInWithGithub,  GitUser] = useSignInWithGithub(auth);
  const navigate = useNavigate()
